@@ -6,7 +6,7 @@
 
 - [01_Lake_types.R](#01_lake_typesr)
 - [02_VA_model.R](#02_va_modelr)
-- [03_trends_in_doy.R](#03_trends_in_doyr)
+- [03_global_lake_volume.R](#03_global_lake_volumer)
 - [04_glacier_volumes_and_ice_loss.R](#04_glacier_volumes_and_ice_lossr)
 - [05_trends_in_Z.R](#05_trends_in_zr)
 - [06_magnitudes_vs_elev_change.R](#06_magnitudes_vs_elev_changer)
@@ -29,7 +29,7 @@ Each script will produce output in form of a figure (displayed in the associate 
 
 ### 01_Lake_types.R
 
-**Script to preprocess assign a dam type to each lake in the glacial lake inventory of Zhang et al. (2024).**
+**Script to assign a dam type to each lake in the glacial lake inventory of Zhang et al. (2024) as of 1990 and 2020**
 
 *Mandatory input data*: 
 - All regional glacial lake shapefiles from Zhang et al. (2024): https://doi.org/10.11888/Cryos.tpdc.300938
@@ -39,6 +39,7 @@ Each script will produce output in form of a figure (displayed in the associate 
 *Main outputs*: 
 - "all_lakes_including_dam_type.rds" (R-object of all glacial lakes with an assigned dam type)
 - "glacier_lakes_2020_centroids.shp" (R-object of all glacial lake centroids for the year 2020)
+- "Lakes19902020_damtype.RDS" (R-object of all glacial lakes in 1990 and 2020 with a dam type assigned)
 
 ---
 
@@ -62,15 +63,18 @@ Each script will produce output in form of a figure (displayed in the associate 
 
 ### 03_global_lake_volume.R
 
-**Script to estimate trends in the annual timing (*doy*, i.e. day in a given year) of ice-dam failures on regional and local scale.**
+**Script to estimate the local, regional, and global volume of glacial lakes.**
 
 *Mandatory input data*: 
-- "all_glofs_tibble.RDS" (R-object with a preprocessed table of all reported GLOFs)
+- "RGI2000-v7.0-o1regions.shp" (O1 regions of the RGI to aggregate lake volumes on regional level)
+- "VA_model.RDS" (R-object with linear regression model of *V* versus *A* distinguished by dam type)
+- "VA_data.RDS" (R-object of all non-repetitively surveyed glacial lakes)
 
 *Output*: 
-- "doy_trends_per_region.RDS" (R-object with regression models of *doy* versus time for all dated GLOFs in the six regions)
-- "doy_change.pdf" (Plot of the temporal trends in *doy* for each region, including the posterior differences in *doy* between 2021 and 1900)
-- "doy_trends_per_glacier.RDS"  (R-object with regression models of *doy* versus time for lakes with repeat GLOFs)
+- "Lakes19902020_damtype.RDS" (R-object of glacial lakes mapped by Zhang et al. (2024) in 1990 and 2020 with a posterior median and 68% HDI estimate of their volume)
+- "all_lakes_with_volumes.RDS" (R-object with posterior median and 68% volume estimate for each lake in 1990 and 2020)
+- "Regional_size_distribution.pdf" (PDF figure showing the empirical exceedance probabilities of lake volumes; Figure S9)
+- "volume_regional_lakes.RDS" (R-object with a posterior estimate of regional glacial lake volumes (median and 68% HDI))
 - "doy_local.pdf" (Plot of local changes in *doy* versus time)
 - "post_trend_doy_per_lake.pdf"  (Plot of local  posterior differences in *doy* for each lake)
 
