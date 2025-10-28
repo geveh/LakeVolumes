@@ -4,7 +4,7 @@
 
 **This repository contains XXX scripts to estimate the local, regional, and global volume of glacial lakes from a given lake area. In addition, we provide protocols to assess the resource potential of glacial lakes, including their distance to, and elevation above, the coast; their potential lifetimes associated with sedimentation; the number of people living above and below catchments hosting glacial lakes.**
 
-- [01_preprocessing.R](#01_lake_area_volumer)
+- [01_Lake_types.R](#01_lake_typesr)
 - [02_trends_in_Qp_and_V0.R](#02_trends_in_qp_and_v0r)
 - [03_trends_in_doy.R](#03_trends_in_doyr)
 - [04_glacier_volumes_and_ice_loss.R](#04_glacier_volumes_and_ice_lossr)
