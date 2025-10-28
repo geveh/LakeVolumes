@@ -1,4 +1,4 @@
-# Code for *"Evolving resource potential of glacial lakes with ongoing deglaciation"*
+# LakeVolumes: Code for *"Evolving resource potential of glacial lakes with ongoing deglaciation"*
 
 ## Overview
 
