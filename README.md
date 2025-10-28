@@ -27,21 +27,18 @@ Each script will produce output in form of a figure (displayed in the associate 
 
 ## Scripts
 
-### 01_preprocessing.R
+### 01_Lake_types.R
 
-**Script to preprocess a raw OpenOffice table of reported glacier lake outburst floods.**
+**Script to preprocess assign a dam type to each lake in the glacial lake inventory of Zhang et al. (2024).**
 
 *Mandatory input data*: 
-- "Global_GLOF_database_2022_05_30.ods" (table with all reported GLOFs. Compiliation as of May 30, 2022)
-- CRU TS V4.05 temperature data
-
+- All regional glacial lake shapefiles from Zhang et al. (2024): https://doi.org/10.11888/Cryos.tpdc.300938
+- The Randolph Glacier Inventory (RGI) V7.0: https://doi.org/10.5067/f6jmovy5navz
+- "RGI2000-v7.0-o2regions_modified_densified.gpkg" (Modified outlines of the O2 regions in the RGI V7.0)
 
 *Main outputs*: 
-- "all_glofs_tibble.RDS" (R-object of all reported GLOFs in the global GLOF database)
-- "all_glofs_V0_tibble.RDS" (R-object of all GLOFs that have reported values of *V*<sub>0</sub>)
-- "all_glofs_qp_tibble.RDS" (R-object of all GLOFs that have reported values of *Q*<sub>p</sub>)
-- "glof_reporting.pdf" (Multi-panel histogram of reported values of all reported GLOFs, reported values of Qp, and reported values of V0 from ice-dammed lakes) 
-- "temp_doy_histogram.pdf" (histogram that both shows the number of reported GLOFs and the mean air temperature in a given month)
+- "all_lakes_including_dam_type.rds" (R-object of all glacial lakes with an assigned dam type)
+- "glacier_lakes_2020_centroids.shp" (R-object of all glacial lake centroids for the year 2020)
 
 ---
 
@@ -141,7 +138,14 @@ from ice-dam failures in six mountain ranges.**
 
 ### summary_stats_veh_revision.py
 
-**Script by Romain Hugonnet to obtain elevation changes from glacier dams. Please contact Romain Hugonnet, if you have further questions.**
+**Matlab Script by Wolfgang Schwanghart to calculate flow path from glacial lake centroids to the coast or endorheic basins. Please contact Wolfgang Schwanghart (wolfgang.schwanghart@uni-potsdam.de), if you have further questions.**
+
+*Mandatory input data*: 
+- "merit500/DEM.mat": a composite of the Merit DEM (https://hydro.iis.u-tokyo.ac.jp/~yamadai/MERIT_DEM/) at 500-m pixel resolution.
+- "merit500/FD.mat": Flow directions calculated from this Merit DEM
+- "lakes_2020.gpkg": a point vector layer with the centroids of all lakes mapped by Zhang et al. (2024) in 2020.
+
+*Output*: 
 
 
 ## Input data
