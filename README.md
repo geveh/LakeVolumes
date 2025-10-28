@@ -5,7 +5,7 @@
 **This repository contains XXX scripts to estimate the local, regional, and global volume of glacial lakes from a given lake area. In addition, we provide protocols to assess the resource potential of glacial lakes, including their distance to, and elevation above, the coast; their potential lifetimes associated with sedimentation; the number of people living above and below catchments hosting glacial lakes.**
 
 - [01_Lake_types.R](#01_lake_typesr)
-- [02_trends_in_Qp_and_V0.R](#02_trends_in_qp_and_v0r)
+- [02_VA_model.R](#02_va_modelr)
 - [03_trends_in_doy.R](#03_trends_in_doyr)
 - [04_glacier_volumes_and_ice_loss.R](#04_glacier_volumes_and_ice_lossr)
 - [05_trends_in_Z.R](#05_trends_in_zr)
@@ -42,29 +42,25 @@ Each script will produce output in form of a figure (displayed in the associate 
 
 ---
 
-### 02_trends_in_Qp_and_V0.R
+### 02_VA_model.R
 
-**Script to fit quantile regression models (50th and 90th percentile) of peak discharges *Q*<sub>p</sub> and volumes *V*<sub>0</sub> versus time 
-from ice-dam failures in six mountain ranges.**
+**Script to fit a Bayesian hierarchical linear regression model of lake area *A* versus volume *V* distinguished by dam type.**
 
 *Mandatory input data*: 
-- "all_glofs_V0_tibble.RDS" (R-object of all GLOFs that have reported values of *V*<sub>0</sub>)
-- "all_glofs_qp_tibble.RDS" (R-object of all GLOFs that have reported values of *Q*<sub>p</sub>)
+- "va.txt" (Text file of bathymetrically surveyed lakes including their volume *V* and area *A* (converted from the Excel Sheet)) 
+- "HDIofMCMC.R" (R-object of all GLOFs that have reported values of *Q*<sub>p</sub>)
 
 *Main outputs*: 
-- "qp_models.RDS" (R-object with regional quantile regression models of *Q*<sub>p</sub> versus time for the 50th and 90th for 4 time periods)
-- "V0_models.RDS" (R-object with regional quantile regression models of *V*<sub>0</sub> versus time for the 50th and 90th for 4 time periods)
-- "fig2.pdf" (PDF figure containing the regional posterior slopes for *Q*<sub>p</sub> and *V*<sub>0</sub> for two different time periods)
-- "all_pooled_mods.pdf" (PDF figure containing the pooled trendes of *Q*<sub>p</sub> and *V*<sub>0</sub> for two different time periods)
-- "qp_model_median_local.RDS"  (R-object with local quantile regression models of median *Q*<sub>p</sub> versus time)
-- "Qp_local.pdf" (PDF figure showing temporal trends of median *Q*<sub>p</sub> for individual glacier lakes) 
-- "V0_model_median_local.RDS"  (R-object with regional quantile regression models of median *V*<sub>0</sub> versus time)
-- "V0_local.pdf" (PDF figure showing temporal trends of median *V*<sub>0</sub> for individual glacier lakes) 
-- "local_posterior_trends.pdf" (PDF figure showing posterior distributions of the trends in local *Q*<sub>p</sub> and V*<sub>0</sub>)
+- "VA_model.RDS" (R-object with linear regression model of *V* versus *A* distinguished by dam type)
+- "model_parameters.pdf" (Summary of model output as a figure; Figure S2)
+- "va_model_one_panel.pdf" (PDF figure showing all V-A data with posterior regression estimates; Figure 1a)
+- "Trend_types_and_posterior.pdf" (PDF figure showing the trend in *V*-*A* per lake type, and the posterior regression)
+- "VA_model_errors.pdf" (PDF figure showing prediction errors of the *V*-*A* model compared to the original data that entered the model; Figure S3)
+- "VA_data.RDS" (R-object of all non-repetitively surveyed glacial lakes)
 
 ---
 
-### 03_trends_in_doy.R
+### 03_global_lake_volume.R
 
 **Script to estimate trends in the annual timing (*doy*, i.e. day in a given year) of ice-dam failures on regional and local scale.**
 
