@@ -2,7 +2,7 @@
 
 ## Overview
 
-**This repository contains XXX scripts to estimate the local, regional, and global volume of glacial lakes from a given lake area. In addition, we provide protocols to assess the resource potential of glacial lakes, including their distance to, and elevation above, the coast; their potential lifetimes associated with sedimentation; the number of people living above and below catchments hosting glacial lakes.**
+**This repository contains eight scripts to estimate the local, regional, and global volume of glacial lakes from a given lake area. In addition, we provide protocols to assess the resource potential of glacial lakes, including their distance to, and elevation above, the coast; their potential lifetimes associated with sedimentation; the number of people living above and below catchments hosting glacial lakes.**
 
 - [01_Lake_types.R](#01_lake_typesr)
 - [02_VA_model.R](#02_va_modelr)
@@ -124,6 +124,7 @@ Each script will produce output in form of a figure (displayed in the associate 
 - "simulated_infill_times.RDS" (R-object with simulated lifetimes of each glacial lake under fluvial and glacial erosion rates, and a scenario weighted by glacial cover in a given catchment)
 - "remaining_storage.pdf" (PDF figure showing the sedimentation-driven storage loss of glacial lakes; Figure 4b)
 - "density_lifetime.pdf" (PDF figure showing the stacked density of estimated individual lake lifetimes; Figure 4a)
+- 7 small panels to show the workflow to estimate the sedimentation-driven lifetime of glacial lakes 
 
 ---
 
