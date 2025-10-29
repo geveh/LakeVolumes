@@ -7,10 +7,7 @@
 - [01_Lake_types.R](#01_lake_typesr)
 - [02_VA_model.R](#02_va_modelr)
 - [03_global_lake_volume.R](#03_global_lake_volumer)
-- [04_glacier_volumes_and_ice_loss.R](#04_glacier_volumes_and_ice_lossr)
-- [05_trends_in_Z.R](#05_trends_in_zr)
-- [06_magnitudes_vs_elev_change.R](#06_magnitudes_vs_elev_changer)
-- [summary_stats_veh_revision.py](#summary_stats_veh_revisionpy)
+
 
 The codes are written in the statistical programming language **R** (https://www.r-project.org/), Version 4.2.2, and called within
 the Graphical User Interface **RStudio** (https://posit.co/download/rstudio-desktop/) under a Microsoft Windows Server 2019 operating system. 
@@ -69,74 +66,20 @@ Each script will produce output in form of a figure (displayed in the associate 
 - "RGI2000-v7.0-o1regions.shp" (O1 regions of the RGI to aggregate lake volumes on regional level)
 - "VA_model.RDS" (R-object with linear regression model of *V* versus *A* distinguished by dam type)
 - "VA_data.RDS" (R-object of all non-repetitively surveyed glacial lakes)
+- "continent_dissolve.shp" (Shapefile of dissolved continent outlines)
 
 *Output*: 
 - "Lakes19902020_damtype.RDS" (R-object of glacial lakes mapped by Zhang et al. (2024) in 1990 and 2020 with a posterior median and 68% HDI estimate of their volume)
 - "all_lakes_with_volumes.RDS" (R-object with posterior median and 68% volume estimate for each lake in 1990 and 2020)
 - "Regional_size_distribution.pdf" (PDF figure showing the empirical exceedance probabilities of lake volumes; Figure S9)
 - "volume_regional_lakes.RDS" (R-object with a posterior estimate of regional glacial lake volumes (median and 68% HDI))
-- "doy_local.pdf" (Plot of local changes in *doy* versus time)
-- "post_trend_doy_per_lake.pdf"  (Plot of local  posterior differences in *doy* for each lake)
+- "lakes_with_catchment_and_landcover.rds" (R-object with for all lakes in 2020 with catchment-wide statistics on relief, glacier and land cover)
+
+
 
 ---
 
-### 04_glacier_volumes_and_ice_loss.R
-
-**Script to obtain the total volumes of glaciers and their volume loss between 2000 and 2019 in 100-m elevation bins.**
-
-*Mandatory input data (Data sources from external repositories are provided in the script)*: 
-- Folder "Region_extents" (Contains the ESRI shapefile *Extent_pol.shp* to display the extent of the study regions)
-- Glacier outlines from the Randolph Glacier Inventory (RGI)
-- Glacier surface DEMs from Farinotti et al. (2019)
-- Glacier volume DEMs from Farinotti et al. (2019)
-- Glacier elevation change data from Hugonnet et al. (2021)
-
-*Output*: 
-- "Regional_glacier_and_melt_volumes.rds" (R-object containing the total volume of glacier volume and volume change between 2000 and 2019 in 100-m elevation bins)
-
----
-
-### 05_trends_in_Z.R
-
-**Script to estimate regional trends in the source elevation (*Z*) of ice-dammed failures.**
-
-*Mandatory input data*: 
-- Digital Elevation models from ALOS World 3D - 30m (AW3D30)
-- Files from the "GDL_database" (We created a merged lake inventory in ESRI shapefile format from regional lake databases. This lake database is available upon request)   
-- "Regional_glacier_and_melt_volumes.rds" (R-object containing the total volume of glacier volume and volume change between 2000 and 2019 in 100-m elevation bins)
-
-*Major outputs*: 
-- "gdl_database_centroid.RDS" (R-object of glacier lake centroids in the six study regions)
-- "glofs_ice_with_z.RDS" (R-object of first reported GLOF from a given lake and its elevation)
-- "Z_trends_per_region.RDS" (R-object with a hierarchical regression models of *Z* versus time for dated GLOFs in the six regions between 1900 and 2021)
-- "elev_trend.pdf" (Plot of the change in GLOF source elevation for six regions between 1900 and 2021, including the posterior regression slope)
-- "Lake_GLOF_elevation.pdf" / "Lake_GLOF_elevation.png" (Plot of the elevation distribution of historic burst ice-dammed lakes and present-day ice-dammed lakes for six regions between 1900 and 2021)
-
----
-
-### 06_magnitudes_vs_elev_change.R
-
-**Script to estimate local trends of  V<sub>0</sub> and  Q<sub>p</sub> with elevation change of the glacier dam.**
-
-*Mandatory input data*: 
-
-- Folder "dh_pergla_cut" (Tables of cumulative elevation change (in m) for glaciers with repeat GLOFs between 2000 and 2019)
-- "all_glofs_tibble.RDS" (R-object with a preprocessed table of all reported GLOFs)
-- "all_glofs_V0_tibble.RDS" (Table of lakes with repeat GLOFs and reported V<sub>0</sub>)
-- "all_glofs_qp_tibble.RDS" (Table of lakes with repeat GLOFs and reported Q<sub>p</sub>)
-- Folder "Region_extents" (Contains the ESRI shapefile *Extent_pol.shp* to display the extent of the study regions)
-
-*Output*: 
-
-- "local_Qp_vs_dhdt_model.RDS" (R-Object containing a hierarchical model of local changes in Q<sub>p</sub> versus glacier elevation change)
-- "local_V0_vs_dhdt_model.RDS" (R-Object containing a hierarchical model of local changes in V<sub>0</sub> versus glacier elevation change)
-- "map_and_trends.pdf" (Map of lakes with repeat GLOFs between 2000 and 2019; local trends of V<sub>0</sub> and Q<sub>p</sub> with cumulative changes in glacier dam elevation)
-- "dam_thinning_rats.shp" (ESRI shapefile showing mean annual elevation change of glacier dams with repeat outbursts between 2000 and 2019)
-- "elev_change_per_glacier.pdf" / "elev_change_per_glacier.png" (Plot of cumulative elevation change for each glacier that produced repeated GLOFs between 2000 and 2019)
-
----
-
-### summary_stats_veh_revision.py
+### process_flowpaths.m
 
 **Matlab Script by Wolfgang Schwanghart to calculate flow path from glacial lake centroids to the coast or endorheic basins. Please contact Wolfgang Schwanghart (wolfgang.schwanghart@uni-potsdam.de), if you have further questions.**
 
