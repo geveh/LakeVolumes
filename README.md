@@ -8,8 +8,10 @@
 - [02_VA_model.R](#02_va_modelr)
 - [03_global_lake_volume.R](#03_global_lake_volumer)
 - [04_Catchment_statistics.R](#04_catchment_statisticsr)
-  
+- [05_Lake_volumes_glaciers_elev_dist.R](05_lake_volumes_glaciers_elev_distr)
 - [06_Lifetimes.R](#06_lifetimer)
+- [07_population_estimates.R](#07_population_estimatesr)
+- [process_flowpaths.m](#process_flowpathsm)
 
 
 The codes are written in the statistical programming language **R** (https://www.r-project.org/), Version 4.2.2, and called within
@@ -93,6 +95,18 @@ Each script will produce output in form of a figure (displayed in the associate 
 
 ---
 
+### 05_Lake_volumes_glaciers_elev_dist.R
+
+**Script to...**
+
+*Mandatory input data*: 
+- ...
+
+*Output*:
+- ...
+
+---
+
 ### 06_Lifetime.R
 
 **Script to approximate the local, regional, and global lifetime (longevity) of glacial lakes.**
@@ -110,6 +124,19 @@ Each script will produce output in form of a figure (displayed in the associate 
 - "simulated_infill_times.RDS" (R-object with simulated lifetimes of each glacial lake under fluvial and glacial erosion rates, and a scenario weighted by glacial cover in a given catchment)
 - "remaining_storage.pdf" (PDF figure showing the sedimentation-driven storage loss of glacial lakes; Figure 4b)
 - "density_lifetime.pdf" (PDF figure showing the stacked density of estimated individual lake lifetimes; Figure 4a)
+
+---
+
+
+### 07_population_estimates.R
+
+**Script to ...**
+
+*Mandatory input data*: 
+- ...
+
+*Output*:
+- ...
 
 ---
 
