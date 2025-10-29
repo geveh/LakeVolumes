@@ -46,7 +46,7 @@ Each script will produce output in form of a figure (displayed in the associate 
 
 *Mandatory input data*: 
 - "va.txt" (Text file of bathymetrically surveyed lakes including their volume *V* and area *A* (converted from the Excel Sheet)) 
-- "HDIofMCMC.R" (R-object of all GLOFs that have reported values of *Q*<sub>p</sub>)
+- "HDIofMCMC.R" (R-function to estimate the highest density interval for a given distribution)
 
 *Main outputs*: 
 - "VA_model.RDS" (R-object with linear regression model of *V* versus *A* distinguished by dam type)
@@ -67,15 +67,34 @@ Each script will produce output in form of a figure (displayed in the associate 
 - "VA_model.RDS" (R-object with linear regression model of *V* versus *A* distinguished by dam type)
 - "VA_data.RDS" (R-object of all non-repetitively surveyed glacial lakes)
 - "continent_dissolve.shp" (Shapefile of dissolved continent outlines)
+- "HDIofMCMC.R" (R-function to estimate the highest density interval for a given distribution)
 
 *Output*: 
 - "Lakes19902020_damtype.RDS" (R-object of glacial lakes mapped by Zhang et al. (2024) in 1990 and 2020 with a posterior median and 68% HDI estimate of their volume)
 - "all_lakes_with_volumes.RDS" (R-object with posterior median and 68% volume estimate for each lake in 1990 and 2020)
 - "Regional_size_distribution.pdf" (PDF figure showing the empirical exceedance probabilities of lake volumes; Figure S9)
 - "volume_regional_lakes.RDS" (R-object with a posterior estimate of regional glacial lake volumes (median and 68% HDI))
-- "lakes_with_catchment_and_landcover.rds" (R-object with for all lakes in 2020 with catchment-wide statistics on relief, glacier and land cover)
+- "lakes_with_catchment_and_landcover.rds" (R-object with catchment-wide statistics on relief, glacier and land cover for all lakes in 2020 )
 
+---
 
+### 06_Lifetime.R
+
+**Script to approximate the local, regional, and global lifetime (longevity) of glacial lakes.**
+
+*Mandatory input data*: 
+- "RGI2000-v7.0-o1regions.shp" (O1 regions of the RGI to aggregate regional lake lifetimes)
+- "lakes_with_catchment_and_landcover.rds" (R-object with catchment-wide statistics on relief, glacier and land cover for all lakes in 2020 )
+- "VA_data.RDS" (R-object of all non-repetitively surveyed glacial lakes)
+- "continent_dissolve.shp" (Shapefile of dissolved continent outlines)
+- "HDIofMCMC.R" (R-function to estimate the highest density interval for a given distribution)
+- "sciadv.adr2009_data_s1_and_s2/adr2009_data_s1.xlsx": glacial erosion rates from Wilner et al. (2024), available at https://www.science.org/doi/10.1126/sciadv.adr2009
+- "sciadv.adr2009_data_s1_and_s2/adr2009_data_s2.xlsx": fluvial erosion rates from Wilner et al. (2024), available at https://www.science.org/doi/10.1126/sciadv.adr2009
+
+*Output*: 
+- "simulated_infill_times.RDS" (R-object with simulated lifetimes of each glacial lake under fluvial and glacial erosion rates, and a scenario weighted by glacial cover in a given catchment)
+- "remaining_storage.pdf" (PDF figure showing the sedimentation-driven storage loss of glacial lakes; Figure 4b)
+- "density_lifetime.pdf" (PDF figure showing the stacked density of estimated individual lake lifetimes; Figure 4a)
 
 ---
 
