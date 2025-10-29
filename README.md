@@ -7,6 +7,9 @@
 - [01_Lake_types.R](#01_lake_typesr)
 - [02_VA_model.R](#02_va_modelr)
 - [03_global_lake_volume.R](#03_global_lake_volumer)
+- [04_Catchment_statistics.R](#04_catchment_statisticsr)
+  
+- [06_Lifetimes.R](#06_lifetimer)
 
 
 The codes are written in the statistical programming language **R** (https://www.r-project.org/), Version 4.2.2, and called within
@@ -75,6 +78,18 @@ Each script will produce output in form of a figure (displayed in the associate 
 - "Regional_size_distribution.pdf" (PDF figure showing the empirical exceedance probabilities of lake volumes; Figure S9)
 - "volume_regional_lakes.RDS" (R-object with a posterior estimate of regional glacial lake volumes (median and 68% HDI))
 - "lakes_with_catchment_and_landcover.rds" (R-object with catchment-wide statistics on relief, glacier and land cover for all lakes in 2020 )
+
+---
+
+### 04_Catchment_statistics.R
+
+**Script to download the Copernicus GLO30 DEM and land cover maps. The script then derives the catchment of each lake, and summarises catchment-wide statistics including glacial cover, land cover, and relief**
+
+*Mandatory input data*: 
+- ...
+
+*Output*:
+- ...
 
 ---
 
