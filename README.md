@@ -31,7 +31,7 @@ Each script will produce output in form of a figure (displayed in the associate 
 
 ### 01_Lake_types.R
 
-**Script to assign a dam type to each lake in the glacial lake inventory of Zhang et al. (2024) as of 1990 and 2020**
+**Script to assign a dam type to each lake in the glacial lake inventory of Zhang et al. (2024) as of 1990 and 2020.**
 
 *Mandatory input data*: 
 - All regional glacial lake shapefiles from Zhang et al. (2024): https://doi.org/10.11888/Cryos.tpdc.300938
@@ -85,7 +85,7 @@ Each script will produce output in form of a figure (displayed in the associate 
 
 ### 04_Catchment_statistics.R
 
-**Script to download the Copernicus GLO30 DEM and land cover maps. The script then derives the catchment of each lake, and summarises catchment-wide statistics including glacial cover, land cover, and relief**
+**Script to download the Copernicus GLO30 DEM and land cover maps. The script then derives the catchment of each lake, and summarises catchment-wide statistics including glacial cover, land cover, and relief.**
 
 *Mandatory input data*: 
 - ...
@@ -124,7 +124,8 @@ Each script will produce output in form of a figure (displayed in the associate 
 - "simulated_infill_times.RDS" (R-object with simulated lifetimes of each glacial lake under fluvial and glacial erosion rates, and a scenario weighted by glacial cover in a given catchment)
 - "remaining_storage.pdf" (PDF figure showing the sedimentation-driven storage loss of glacial lakes; Figure 4b)
 - "density_lifetime.pdf" (PDF figure showing the stacked density of estimated individual lake lifetimes; Figure 4a)
-- 7 small panels to show the workflow to estimate the sedimentation-driven lifetime of glacial lakes 
+- "Regional_lake_lifetimes.pdf" (PDF figure showing the cumulative estimated regional lifetime, i.e. year when x% of the regional glacial lake volume will be lost; Figure S8)
+- 7 small panels to show the workflow to estimate the sedimentation-driven lifetime of glacial lakes for Figure s7 ("small_panel_catchment_size.pdf"; "small_panel_erosion_rate.pdf"; "small_panel_glac_cov.pdf"; "small_panel_rock_density.pdf"; "small_panel_sediment_prod.pdf"; "small_panel_sediment_depo.pdf"; "small_panel_lake_volume.pdf")
 
 ---
 
