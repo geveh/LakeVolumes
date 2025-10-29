@@ -16,16 +16,16 @@
 
 The codes are written in the statistical programming language **R** (https://www.r-project.org/), Version 4.2.2, and called within
 the Graphical User Interface **RStudio** (https://posit.co/download/rstudio-desktop/) under a Microsoft Windows Server 2019 operating system. 
-Please install both **R and RStudio** on your machine to successfully run the codes and produce figures and R data objects.
+Please install both R and RStudio on your machine to successfully run the codes and produce figures and R data objects.
 
 The R codes depend on a number of packages, listed at the beginning of all scripts. Please install those packages before running the scripts. 
 The comments within the scripts provide further details on model dependencies and usage of functions. 
 
 Each script will call one or more input data object(s), which are available via ***Zenodo***.  
 We also use freely available digital elevation models (DEMs), land cover maps, glaciological data (e.g., outlines of glaciers and ice sheets), and glacial lake outlines. Sources for these datasets are given in the script where they are needed. Please download the data before executing the scripts.  
-Please put all input files into the same folder, and change the working directory used in the script to your folder structure. The scripts can be executed one after the other, with the each script generating output that is used as input for the next script.
+Please put all input files into the same folder, and change the working directory (set at the beginning of each script) to your folder structure. The scripts can be executed one after another, with the each script generating output that is used as input for the next script.
 The scripts (and parts thereof) can also be run independent of each other using the input files (in most cases *.RDS* files) from Zenodo.
-Each script will produce output in form of a figure (displayed in the associate manuscript and Extended Data figures) or R-objects.
+Each script will produce output in form of a figure (displayed in the associate manuscript and supplementary figures) or R-data objects.
 
 ## Scripts
 
