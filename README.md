@@ -142,13 +142,23 @@ Each script will produce output in form of a figure (displayed in the associate 
 
 ### 07_population_estimates.R
 
-**Script to ...**
+**Script to extract population in the catchment feeding glacial lakes, and within the first 50 km downstream of glacial lakes**
 
 *Mandatory input data*: 
-- ...
+- "all_catchments_dissolved_no_holes.gpkg" (Geopackage with all catchments feeding glacial lakes, derived from COP30 DEM data)
+- "all_lakes_with_volumes.RDS"
+- "flowpaths_detailed.txt" (Flowpaths from all lakes as of 2020 from the lake to the coast/ endorheic basin)
+- "diff.gpkg"
+- "landscan-global-2020.tif" (Landscan2020 data corresponding to the year when lakes were mapped: https://landscan.ornl.gov/)
+- "ppp_2020_1km_Aggregated.tif" (Worldpop 1km global: https://hub.worldpop.org/geodata/listing?id=64)
+- "gpw_v4_population_count_rev11_2020_30_sec.tif" (NASA's Gridded Population of the World (GPW), version 4; https://www.earthdata.nasa.gov/data/projects/gpw/data-access-tools)
+- "GHS_POP_E2020_GLOBE_R2023A_54009_100_V1_0.tif" (Global Human Settlement Layer (GHSL); https://human-settlement.emergency.copernicus.eu/download.php)
 
 *Output*:
-- ...
+- "flowpath_buffers.gpkg" (1km buffer along the first 50-km flow paths downstream of glacial lakes)
+- "population_upstream_downstream.pdf"
+- "World_map.pdf"
+- "Regional_volume_vs_population.pdf"
 
 ---
 
