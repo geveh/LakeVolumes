@@ -90,7 +90,9 @@ Each script will produce output in form of a figure (displayed in the associate 
 *Mandatory input data*: 
 - "RGI2000-v7.0-o2regions.shp" (Original outlines of the O2 regions in the RGI V7.0)
 - "RGI2000-v7.0-o2regions_modified_densified.gpkg" (Modified outlines of the O2 regions in the RGI V7.0)
-
+- "Lakes19902020_damtype.RDS" (R-object of glacial lakes mapped by Zhang et al. (2024) in 1990 and 2020 with a posterior median and 68% HDI estimate of their volume)
+- RGI2000-v7.0-G-global (All glaciers in the RGI V7.0)
+- "glaciers_cci_gi_greenland_gis-cl2_2000.shp" (outlines of the Greenland ice sheet in 2000; https://glaciers-cci.enveo.at/crdp2/index.html)
 
 *Output*:
 - ...
