@@ -11,7 +11,7 @@
 - [05_Lake_volumes_glaciers_elev_dist.R](05_lake_volumes_glaciers_elev_distr)
 - [06_Lifetimes.R](#06_lifetimer)
 - [07_population_estimates.R](#07_population_estimatesr)
-- [process_flowpaths.m](#process_flowpathsm)
+- [process_flowpaths_detailed.m](#process_flowpaths_detailedm)
 
 
 The codes are written in the statistical programming language **R** (https://www.r-project.org/), Version 4.2.2, and called within
@@ -148,7 +148,7 @@ Each script will produce output in form of a figure (displayed in the associate 
 
 ---
 
-### process_flowpaths.m
+### process_flowpaths_detailed.m
 
 **Matlab Script by Wolfgang Schwanghart to calculate flow path from glacial lake centroids to the coast or endorheic basins. Please contact Wolfgang Schwanghart (wolfgang.schwanghart@uni-potsdam.de), if you have further questions.**
 
@@ -158,7 +158,7 @@ Each script will produce output in form of a figure (displayed in the associate 
 - "lakes_2020.gpkg": a point vector layer with the centroids of all lakes mapped by Zhang et al. (2024) in 2020.
 
 *Output*: 
-
+- "flowpaths_detailed.txt" (Unstructured Textfile with coordinates, length, and elevation of edges along the flow path from a lake to the sea/ endorheic basin)
 
 ## Input data
 
