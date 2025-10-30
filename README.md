@@ -95,7 +95,7 @@ Each script will produce output in form of a figure (displayed in the associate 
 - "glaciers_cci_gi_greenland_gis-cl2_2000.shp" (outlines of the Greenland ice sheet in 2000; https://glaciers-cci.enveo.at/crdp2/index.html)
 
 *Output*:
-- ...
+- "lakes_with_catchment_and_landcover.rds" (R-object of all glacial lakes as of 2020 including statistics on relief, as well as glacier and land cover)
 
 ---
 
