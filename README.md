@@ -104,7 +104,7 @@ Each script will produce output in form of a figure (displayed in the associate 
 **Script to...**
 
 *Mandatory input data*: 
-- ...
+- "Millan_glacier_volumes.xlsx" (Excel-file of regional glacier volumes, obtained from Millan et al. (2022): https://www.nature.com/articles/s41561-021-00885-z
 
 *Output*:
 - ...
