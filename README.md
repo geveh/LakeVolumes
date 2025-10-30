@@ -122,10 +122,10 @@ Each script will produce output in form of a figure (displayed in the associate 
 
 *Output*: 
 - "simulated_infill_times.RDS" (R-object with simulated lifetimes of each glacial lake under fluvial and glacial erosion rates, and a scenario weighted by glacial cover in a given catchment)
-- "remaining_storage.pdf" (PDF figure showing the sedimentation-driven storage loss of glacial lakes; Figure 4b)
 - "density_lifetime.pdf" (PDF figure showing the stacked density of estimated individual lake lifetimes; Figure 4a)
+- "remaining_storage.pdf" (PDF figure showing the sedimentation-driven storage loss of glacial lakes; Figure 4b)
 - "Regional_lake_lifetimes.pdf" (PDF figure showing the cumulative estimated regional lifetime, i.e. year when x% of the regional glacial lake volume will be lost; Figure S8)
-- 7 small panels to show the workflow to estimate the sedimentation-driven lifetime of glacial lakes for Figure s7 ("small_panel_catchment_size.pdf"; "small_panel_erosion_rate.pdf"; "small_panel_glac_cov.pdf"; "small_panel_rock_density.pdf"; "small_panel_sediment_prod.pdf"; "small_panel_sediment_depo.pdf"; "small_panel_lake_volume.pdf")
+- 7 small panels to show the workflow to estimate the sedimentation-driven lifetime of glacial lakes for Figure S7 ("small_panel_catchment_size.pdf"; "small_panel_erosion_rate.pdf"; "small_panel_glac_cov.pdf"; "small_panel_rock_density.pdf"; "small_panel_sediment_prod.pdf"; "small_panel_sediment_depo.pdf"; "small_panel_lake_volume.pdf")
 - "volume_vs_lifetime.pdf" (PDF figure showing the median volume + 68% HDI vs. simulated median sedimentation-driven lifetime + 68% HDI of all glacial lakes)  
 - "landcover.pdf" (PDF figure showing the regional landcover in catchments feeding glacial lakes; Figure 5)
 
