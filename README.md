@@ -88,7 +88,9 @@ Each script will produce output in form of a figure (displayed in the associate 
 **Script to download the Copernicus GLO30 DEM and land cover maps. The script then derives the catchment of each lake, and summarises catchment-wide statistics including glacial cover, land cover, and relief.**
 
 *Mandatory input data*: 
-- ...
+- "RGI2000-v7.0-o2regions.shp" (Original outlines of the O2 regions in the RGI V7.0)
+- "RGI2000-v7.0-o2regions_modified_densified.gpkg" (Modified outlines of the O2 regions in the RGI V7.0)
+
 
 *Output*:
 - ...
