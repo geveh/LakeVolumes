@@ -112,7 +112,7 @@ Each script will produce output in form of a figure (displayed in the associate 
 - "parameter_ice_vol_loss_fits.pdf" (PDF-figure showing the performance of the two models estimating glacier volume (change) from glacial lake (change)
 - "cumulative_distances_and_elevations.pdf" (PDF-figure showing the global cumulated volume of glacier lakes with distance to the coast/ elevation; Figure 3)
 - "cumulative_distances_and_elevations_regional.pdf" (PDF-figure showing the regional cumulated volume of glacier lakes with distance to the coast/ elevation; Figure S6)
-- 
+
 ---
 
 ### 06_Lifetime.R
