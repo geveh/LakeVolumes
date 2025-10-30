@@ -101,14 +101,18 @@ Each script will produce output in form of a figure (displayed in the associate 
 
 ### 05_Lake_volumes_glaciers_elev_dist.R
 
-**Script to...**
+**Script to estimate trends of glacier volume (change) with glacial lake volume (change), and to assess flow path distances from glacial lakes to the coast.**
 
 *Mandatory input data*: 
 - "Millan_glacier_volumes.xlsx" (Excel-file of regional glacier volumes, obtained from Millan et al. (2022): https://www.nature.com/articles/s41561-021-00885-z
+- "RGI2000-v7.0-o1regions.shp" (O1 regions of the RGI to aggregate lake volumes on regional level)
 
 *Output*:
-- ...
-
+- "lake_and_glacier_volume_change.pdf" (PDF-figure showing trends of lake volume (change) with glacier mass (change); Figure S5)
+- "parameter_ice_vol_loss_fits.pdf" (PDF-figure showing the performance of the two models estimating glacier volume (change) from glacial lake (change)
+- "cumulative_distances_and_elevations.pdf" (PDF-figure showing the global cumulated volume of glacier lakes with distance to the coast/ elevation; Figure 3)
+- "cumulative_distances_and_elevations_regional.pdf" (PDF-figure showing the regional cumulated volume of glacier lakes with distance to the coast/ elevation; Figure S6)
+- 
 ---
 
 ### 06_Lifetime.R
