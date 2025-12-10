@@ -68,7 +68,7 @@ Each script will produce output in form of a figure (displayed in the associate 
 **Script to estimate the local, regional, and global volume of glacial lakes.**
 
 *Mandatory input data*: 
-- "RGI2000-v7.0-o1regions.shp" (O1 regions of the RGI to aggregate lake volumes on regional level)
+- "RGI2000-v7.0-o1regions.shp" (O1 regions of the RGI to aggregate lake volumes on regional level from https://doi.org/10.5067/f6jmovy5navz)
 - "VA_model.RDS" (R-object with linear regression model of *V* versus *A* distinguished by dam type)
 - "VA_data.RDS" (R-object of all non-repetitively surveyed glacial lakes)
 - "continent_dissolve.shp" (Shapefile of dissolved continent outlines)
