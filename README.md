@@ -51,7 +51,7 @@ Each script will produce output in form of a figure (displayed in the associate 
 
 *Mandatory input data*: 
 - "va.txt" (Text file of bathymetrically surveyed lakes including their volume *V* and area *A* (converted from the Excel Sheet)) 
-- "HDIofMCMC.R" (R-function to estimate the highest density interval for a given distribution)
+- "HDIofMCMC.R" (R-function to estimate the highest density interval for a given distribution, written by John K. Kruschke, available in this zip folder: https://drive.google.com/file/d/1rkpJC148LB4Hi7K-1IRKkqyED3PGWKeo/view)
 
 *Main outputs*: 
 - "VA_model.RDS" (R-object with linear regression model of *V* versus *A* distinguished by dam type)
@@ -71,8 +71,8 @@ Each script will produce output in form of a figure (displayed in the associate 
 - "RGI2000-v7.0-o1regions.shp" (O1 regions of the RGI to aggregate lake volumes on regional level from https://doi.org/10.5067/f6jmovy5navz)
 - "VA_model.RDS" (R-object with linear regression model of *V* versus *A* distinguished by dam type)
 - "VA_data.RDS" (R-object of all non-repetitively surveyed glacial lakes)
-- "continent_dissolve.shp" (Shapefile of dissolved continent outlines)
-- "HDIofMCMC.R" (R-function to estimate the highest density interval for a given distribution)
+- "continent_dissolve.shp" (Shapefile of dissolved continent outlines from ArcGIS Hub: https://hub.arcgis.com/datasets/esri::world-continents/about)
+- "HDIofMCMC.R" (R-function to estimate the highest density interval for a given distribution, written by John K. Kruschke, available in this zip folder: https://drive.google.com/file/d/1rkpJC148LB4Hi7K-1IRKkqyED3PGWKeo/view)
 
 *Output*: 
 - "Lakes19902020_damtype.RDS" (R-object of glacial lakes mapped by Zhang et al. (2024) in 1990 and 2020 with a posterior median and 68% HDI estimate of their volume)
@@ -124,7 +124,7 @@ Each script will produce output in form of a figure (displayed in the associate 
 - "lakes_with_catchment_and_landcover.rds" (R-object with catchment-wide statistics on relief, glacier and land cover for all lakes in 2020 )
 - "VA_data.RDS" (R-object of all non-repetitively surveyed glacial lakes)
 - "continent_dissolve.shp" (Shapefile of dissolved continent outlines)
-- "HDIofMCMC.R" (R-function to estimate the highest density interval for a given distribution)
+- "HDIofMCMC.R" (R-function to estimate the highest density interval for a given distribution, written by John K. Kruschke, available in this zip folder: https://drive.google.com/file/d/1rkpJC148LB4Hi7K-1IRKkqyED3PGWKeo/view)
 - "sciadv.adr2009_data_s1_and_s2/adr2009_data_s1.xlsx": glacial erosion rates from Wilner et al. (2024), available at https://www.science.org/doi/10.1126/sciadv.adr2009
 - "sciadv.adr2009_data_s1_and_s2/adr2009_data_s2.xlsx": fluvial erosion rates from Wilner et al. (2024), available at https://www.science.org/doi/10.1126/sciadv.adr2009
 
