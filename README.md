@@ -55,10 +55,10 @@ Each script will produce output in form of a figure (displayed in the associate 
 
 *Main outputs*: 
 - "VA_model.RDS" (R-object with linear regression model of *V* versus *A* distinguished by dam type)
-- "model_parameters.pdf" (Summary of model output as a figure; Figure S2)
+- "model_parameters.pdf" (Summary of model output as a figure; Extended Data Figure 2)
 - "va_model_one_panel.pdf" (PDF figure showing all V-A data with posterior regression estimates; Figure 1a)
 - "Trend_types_and_posterior.pdf" (PDF figure showing the trend in *V*-*A* per lake type, and the posterior regression)
-- "VA_model_errors.pdf" (PDF figure showing prediction errors of the *V*-*A* model compared to the original data that entered the model; Figure S3)
+- "VA_model_errors.pdf" (PDF figure showing prediction errors of the *V*-*A* model compared to the original data that entered the model; Extended Data Figure 3)
 - "VA_data.RDS" (R-object of all non-repetitively surveyed glacial lakes)
 
 ---
@@ -77,9 +77,8 @@ Each script will produce output in form of a figure (displayed in the associate 
 *Output*: 
 - "Lakes19902020_damtype.RDS" (R-object of glacial lakes mapped by Zhang et al. (2024) in 1990 and 2020 with a posterior median and 68% HDI estimate of their volume)
 - "all_lakes_with_volumes.RDS" (R-object with posterior median and 68% volume estimate for each lake in 1990 and 2020)
-- "Regional_size_distribution.pdf" (PDF figure showing the empirical exceedance probabilities of lake volumes; Figure S9)
+- "Regional_size_distribution.pdf" (PDF figure showing the empirical exceedance probabilities of lake volumes; Extended Data Figure 9)
 - "volume_regional_lakes.RDS" (R-object with a posterior estimate of regional glacial lake volumes (median and 68% HDI))
-- "lakes_with_catchment_and_landcover.rds" (R-object with catchment-wide statistics on relief, glacier and land cover for all lakes in 2020 )
 
 ---
 
@@ -88,10 +87,10 @@ Each script will produce output in form of a figure (displayed in the associate 
 **Script to download the Copernicus GLO30 DEM and land cover maps. The script then derives the catchment of each lake, and summarises catchment-wide statistics including glacial cover, land cover, and relief.**
 
 *Mandatory input data*: 
-- "RGI2000-v7.0-o2regions.shp" (Original outlines of the O2 regions in the RGI V7.0)
+- "RGI2000-v7.0-o2regions.shp" (Original outlines of the O2 regions in the RGI V7.0, https://doi.org/10.5067/f6jmovy5navz)
 - "RGI2000-v7.0-o2regions_modified_densified.gpkg" (Modified outlines of the O2 regions in the RGI V7.0)
 - "Lakes19902020_damtype.RDS" (R-object of glacial lakes mapped by Zhang et al. (2024) in 1990 and 2020 with a posterior median and 68% HDI estimate of their volume)
-- RGI2000-v7.0-G-global (All glaciers in the RGI V7.0)
+- RGI2000-v7.0-G-global (All glaciers in the RGI V7.0, https://doi.org/10.5067/f6jmovy5navz)
 - "glaciers_cci_gi_greenland_gis-cl2_2000.shp" (outlines of the Greenland ice sheet in 2000; https://glaciers-cci.enveo.at/crdp2/index.html)
 
 *Output*:
@@ -106,12 +105,13 @@ Each script will produce output in form of a figure (displayed in the associate 
 *Mandatory input data*: 
 - "Millan_glacier_volumes.xlsx" (Excel-file of regional glacier volumes, obtained from Millan et al. (2022): https://www.nature.com/articles/s41561-021-00885-z
 - "RGI2000-v7.0-o1regions.shp" (O1 regions of the RGI to aggregate lake volumes on regional level)
+- "flowpaths_detailed.txt" (Irregular txt file provided by Wolfgang Schwanghart. The file is organised by lines, with every lake is identified by 5 lines: its ID, and the X, Y, distance, and Z coordinate from the source towards the coast. Every fifth line, a new flow path starts from a new lake starts.)
 
 *Output*:
-- "lake_and_glacier_volume_change.pdf" (PDF-figure showing trends of lake volume (change) with glacier mass (change); Figure S5)
+- "lake_and_glacier_volume_change.pdf" (PDF-figure showing trends of lake volume (change) with glacier mass (change); Extended Data Figure 5)
 - "parameter_ice_vol_loss_fits.pdf" (PDF-figure showing the performance of the two models estimating glacier volume (change) from glacial lake (change)
 - "cumulative_distances_and_elevations.pdf" (PDF-figure showing the global cumulated volume of glacier lakes with distance to the coast/ elevation; Figure 3)
-- "cumulative_distances_and_elevations_regional.pdf" (PDF-figure showing the regional cumulated volume of glacier lakes with distance to the coast/ elevation; Figure S6)
+- "cumulative_distances_and_elevations_regional.pdf" (PDF-figure showing the regional cumulated volume of glacier lakes with distance to the coast/ elevation; Extended Data Figure 6)
 
 ---
 
@@ -132,8 +132,8 @@ Each script will produce output in form of a figure (displayed in the associate 
 - "simulated_infill_times.RDS" (R-object with simulated lifetimes of each glacial lake under fluvial and glacial erosion rates, and a scenario weighted by glacial cover in a given catchment)
 - "density_lifetime.pdf" (PDF figure showing the stacked density of estimated individual lake lifetimes; Figure 4a)
 - "remaining_storage.pdf" (PDF figure showing the sedimentation-driven storage loss of glacial lakes; Figure 4b)
-- "Regional_lake_lifetimes.pdf" (PDF figure showing the cumulative estimated regional lifetime, i.e. year when x% of the regional glacial lake volume will be lost; Figure S8)
-- 7 small panels to show the workflow to estimate the sedimentation-driven lifetime of glacial lakes for Figure S7 ("small_panel_catchment_size.pdf"; "small_panel_erosion_rate.pdf"; "small_panel_glac_cov.pdf"; "small_panel_rock_density.pdf"; "small_panel_sediment_prod.pdf"; "small_panel_sediment_depo.pdf"; "small_panel_lake_volume.pdf")
+- "Regional_lake_lifetimes.pdf" (PDF figure showing the cumulative estimated regional lifetime, i.e. year when x% of the regional glacial lake volume will be lost; Extended Data Figure 8)
+- 7 small panels to show the workflow to estimate the sedimentation-driven lifetime of glacial lakes for Extended Data Figure 7 ("small_panel_catchment_size.pdf"; "small_panel_erosion_rate.pdf"; "small_panel_glac_cov.pdf"; "small_panel_rock_density.pdf"; "small_panel_sediment_prod.pdf"; "small_panel_sediment_depo.pdf"; "small_panel_lake_volume.pdf")
 - "volume_vs_lifetime.pdf" (PDF figure showing the median volume + 68% HDI vs. simulated median sedimentation-driven lifetime + 68% HDI of all glacial lakes)  
 - "landcover.pdf" (PDF figure showing the regional landcover in catchments feeding glacial lakes; Figure 5)
 
