@@ -103,8 +103,11 @@ Each script will produce output in form of a figure (displayed in the associate 
 **Script to estimate trends of glacier volume (change) with glacial lake volume (change), and to assess flow path distances from glacial lakes to the coast.**
 
 *Mandatory input data*: 
-- "Millan_glacier_volumes.xlsx" (Excel-file of regional glacier volumes, obtained from Millan et al. (2022): https://www.nature.com/articles/s41561-021-00885-z
+- "Millan_glacier_volumes.xlsx" (Excel-file of regional glacier volumes, extracted from Millan et al. (2022): https://www.nature.com/articles/s41561-021-00885-z
+- "Hugonnet_glacier_loss.txt" (Text-file glacier with mass loss data from Hugonnet et al. (2021), available at https://doi.org/10.6096/13)
 - "RGI2000-v7.0-o1regions.shp" (O1 regions of the RGI to aggregate lake volumes on regional level)
+- "all_lakes_with_volumes.RDS" (R-object with posterior median and 68% volume estimate for each lake in 1990 and 2020)
+- - "lakes_with_catchment_and_landcover.rds" (R-object with catchment-wide statistics on relief, glacier and land cover for all lakes in 2020)
 - "flowpaths_detailed.txt" (Irregular txt file provided by Wolfgang Schwanghart. The file is organised by lines, with every lake is identified by 5 lines: its ID, and the X, Y, distance, and Z coordinate from the source towards the coast. Every fifth line, a new flow path starts from a new lake starts.)
 
 *Output*:
@@ -121,7 +124,7 @@ Each script will produce output in form of a figure (displayed in the associate 
 
 *Mandatory input data*: 
 - "RGI2000-v7.0-o1regions.shp" (O1 regions of the RGI to aggregate regional lake lifetimes)
-- "lakes_with_catchment_and_landcover.rds" (R-object with catchment-wide statistics on relief, glacier and land cover for all lakes in 2020 )
+- "lakes_with_catchment_and_landcover.rds" (R-object with catchment-wide statistics on relief, glacier and land cover for all lakes in 2020)
 - "VA_data.RDS" (R-object of all non-repetitively surveyed glacial lakes)
 - "continent_dissolve.shp" (Shapefile of dissolved continent outlines)
 - "HDIofMCMC.R" (R-function to estimate the highest density interval for a given distribution, written by John K. Kruschke, available in this zip folder: https://drive.google.com/file/d/1rkpJC148LB4Hi7K-1IRKkqyED3PGWKeo/view)
