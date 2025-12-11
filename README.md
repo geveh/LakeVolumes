@@ -21,7 +21,7 @@ Please install both R and RStudio on your machine to successfully run the codes 
 The R codes depend on a number of packages, listed at the beginning of all scripts. Please install those packages before running the scripts. 
 The comments within the scripts provide further details on model dependencies and usage of functions. 
 
-Each script will call one or more input data object(s), which are available via ***Zenodo***.  
+Each script will call one or more input data object(s), which are available via ***Zenodo: Veh, G. Supplementary Data for "Evolving resource potential of glacial lakes with ongoing deglaciation" [Data set]. Zenodo. https://doi.org/10.5281/zenodo.17896427 (2025)***  
 We also use freely available digital elevation models (DEMs), land cover maps, glaciological data (e.g., outlines of glaciers and ice sheets), and glacial lake outlines. Sources for these datasets are given in the script where they are needed. Please download the data before executing the scripts.  
 Please put all input files into the same folder, and change the working directory (set at the beginning of each script) to your folder structure. The scripts can be executed one after another, with the each script generating output that is used as input for the next script.
 The scripts (and parts thereof) can also be run independent of each other using the input files (in most cases *.RDS* files) from Zenodo.
@@ -189,6 +189,7 @@ Please visit the repository on Zenodo to obtain the input files.
 ## References
 
 Georg Veh, Wolfgang Schwanghart, Oliver Korup, and Jonathan L. Carrivick: *Evolving resource potential of glacial lakes with ongoing deglaciation*. Nature Water, In Revision.
+Veh, G. Supplementary Data for "Evolving resource potential of glacial lakes with ongoing deglaciation" [Data set]. Zenodo. https://doi.org/10.5281/zenodo.17896427 (2025)
 
 ## Contact
 
