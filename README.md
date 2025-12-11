@@ -91,7 +91,7 @@ Each script will produce output in form of a figure (displayed in the associate 
 - "RGI2000-v7.0-o2regions_modified_densified.gpkg" (Modified outlines of the O2 regions in the RGI V7.0)
 - "Lakes19902020_damtype.RDS" (R-object of glacial lakes mapped by Zhang et al. (2024) in 1990 and 2020 with a posterior median and 68% HDI estimate of their volume)
 - RGI2000-v7.0-G-global (All glaciers in the RGI V7.0, https://doi.org/10.5067/f6jmovy5navz)
-- Copernicus GLO30 and GLO90 DEMs (30- and 90-m resolution DEMs derived from the TanDEM-X mission, available through Microsoft Planetary Computer: https://planetarycomputer.microsoft.com/api/stac/v1/)
+- Copernicus GLO30 and GLO90 DEMs (During the process, the script will 30-m and 90-m resolution DEMs derived from the TanDEM-X mission, available through Microsoft Planetary Computer: https://planetarycomputer.microsoft.com/api/stac/v1/)
 - "glaciers_cci_gi_greenland_gis-cl2_2000.shp" (outlines of the Greenland ice sheet in 2000, available at https://glaciers-cci.enveo.at/crdp2/index.html)
 
 *Output*:
@@ -126,7 +126,6 @@ Each script will produce output in form of a figure (displayed in the associate 
 *Mandatory input data*: 
 - "RGI2000-v7.0-o1regions.shp" (O1 regions of the RGI to aggregate regional lake lifetimes)
 - "lakes_with_catchment_and_landcover.rds" (R-object with catchment-wide statistics on relief, glacier and land cover for all lakes in 2020)
-- "VA_data.RDS" (R-object of all non-repetitively surveyed glacial lakes)
 - "all_lakes_with_volumes.RDS" (R-object with posterior median and 68% volume estimate for each lake in 1990 and 2020)
 - "continent_dissolve.shp" (Shapefile of dissolved continent outlines)
 - "HDIofMCMC.R" (R-function to estimate the highest density interval for a given distribution, written by John K. Kruschke, available in this zip folder: https://drive.google.com/file/d/1rkpJC148LB4Hi7K-1IRKkqyED3PGWKeo/view)
