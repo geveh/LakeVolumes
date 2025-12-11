@@ -8,7 +8,7 @@
 - [02_VA_model.R](#02_va_modelr)
 - [03_global_lake_volume.R](#03_global_lake_volumer)
 - [04_Catchment_statistics.R](#04_catchment_statisticsr)
-- [05_Lake_volumes_glaciers_elev_dist.R](05_lake_volumes_glaciers_elev_distr)
+- [05_Lake_volumes_glaciers_elev_dist.R](#05_lake_volumes_glaciers_elev_distr)
 - [06_Lifetimes.R](#06_lifetimer)
 - [07_population_estimates.R](#07_population_estimatesr)
 - [process_flowpaths_detailed.m](#process_flowpaths_detailedm)
