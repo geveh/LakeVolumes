@@ -34,13 +34,13 @@ Each script will produce output in form of a figure (displayed in the associate 
 **Script to assign a dam type to each lake in the glacial lake inventory of Zhang et al. (2024) as of 1990 and 2020.**
 
 *Mandatory input data*: 
-- All regional glacial lake shapefiles from Zhang et al. (2024): https://doi.org/10.11888/Cryos.tpdc.300938
-- The Randolph Glacier Inventory (RGI) V7.0: https://doi.org/10.5067/f6jmovy5navz
+- All regional glacial lake shapefiles from Zhang et al. (2024), available at https://doi.org/10.11888/Cryos.tpdc.300938
+- The Randolph Glacier Inventory (RGI) V7.0, available at https://doi.org/10.5067/f6jmovy5navz
 - "RGI2000-v7.0-o2regions_modified_densified.gpkg" (Modified outlines of the O2 regions in the RGI V7.0)
 
 *Main outputs*: 
 - "all_lakes_including_dam_type.rds" (R-object of all glacial lakes with an assigned dam type)
-- "glacier_lakes_2020_centroids.shp" (R-object of all glacial lake centroids for the year 2020)
+- "glacier_lakes_2020_centroids.shp" (R-object of all glacial lake centroids for the year 2020, used to derive downstream flow paths)
 - "Lakes19902020_damtype.RDS" (R-object of all glacial lakes in 1990 and 2020 with a dam type assigned)
 
 ---
@@ -78,7 +78,7 @@ Each script will produce output in form of a figure (displayed in the associate 
 - "Lakes19902020_damtype.RDS" (R-object of glacial lakes mapped by Zhang et al. (2024) in 1990 and 2020 with a posterior median and 68% HDI estimate of their volume)
 - "all_lakes_with_volumes.RDS" (R-object with posterior median and 68% volume estimate for each lake in 1990 and 2020)
 - "Regional_size_distribution.pdf" (PDF figure showing the empirical exceedance probabilities of lake volumes; Extended Data Figure 9)
-- "volume_regional_lakes.RDS" (R-object with a posterior estimate of regional glacial lake volumes (median and 68% HDI))
+- "volume_regional_lakes.RDS" (R-object with a posterior estimate of regional glacial lake volumes, including the median and 68% HDI of lake volumes)
 
 ---
 
@@ -91,7 +91,8 @@ Each script will produce output in form of a figure (displayed in the associate 
 - "RGI2000-v7.0-o2regions_modified_densified.gpkg" (Modified outlines of the O2 regions in the RGI V7.0)
 - "Lakes19902020_damtype.RDS" (R-object of glacial lakes mapped by Zhang et al. (2024) in 1990 and 2020 with a posterior median and 68% HDI estimate of their volume)
 - RGI2000-v7.0-G-global (All glaciers in the RGI V7.0, https://doi.org/10.5067/f6jmovy5navz)
-- "glaciers_cci_gi_greenland_gis-cl2_2000.shp" (outlines of the Greenland ice sheet in 2000; https://glaciers-cci.enveo.at/crdp2/index.html)
+- Copernicus GLO30 and GLO90 DEMs (30- and 90-m resolution DEMs derived from the TanDEM-X mission, available through Microsoft Planetary Computer: https://planetarycomputer.microsoft.com/api/stac/v1/)
+- "glaciers_cci_gi_greenland_gis-cl2_2000.shp" (outlines of the Greenland ice sheet in 2000, available at https://glaciers-cci.enveo.at/crdp2/index.html)
 
 *Output*:
 - "lakes_with_catchment_and_landcover.rds" (R-object of all glacial lakes as of 2020 including statistics on relief, as well as glacier and land cover)
