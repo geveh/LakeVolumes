@@ -108,7 +108,7 @@ Each script will produce output in form of a figure (displayed in the associate 
 - "Hugonnet_glacier_loss.txt" (Text-file glacier with mass loss data from Hugonnet et al. (2021), available at https://doi.org/10.6096/13)
 - "RGI2000-v7.0-o1regions.shp" (O1 regions of the RGI to aggregate lake volumes on regional level)
 - "all_lakes_with_volumes.RDS" (R-object with posterior median and 68% volume estimate for each lake in 1990 and 2020)
-- - "lakes_with_catchment_and_landcover.rds" (R-object with catchment-wide statistics on relief, glacier and land cover for all lakes in 2020)
+- "lakes_with_catchment_and_landcover.rds" (R-object with catchment-wide statistics on relief, glacier and land cover for all lakes in 2020)
 - "flowpaths_detailed.txt" (Irregular txt file provided by Wolfgang Schwanghart. The file is organised by lines, with every lake is identified by 5 lines: its ID, and the X, Y, distance, and Z coordinate from the source towards the coast. Every fifth line, a new flow path starts from a new lake starts.)
 
 *Output*:
@@ -127,6 +127,7 @@ Each script will produce output in form of a figure (displayed in the associate 
 - "RGI2000-v7.0-o1regions.shp" (O1 regions of the RGI to aggregate regional lake lifetimes)
 - "lakes_with_catchment_and_landcover.rds" (R-object with catchment-wide statistics on relief, glacier and land cover for all lakes in 2020)
 - "VA_data.RDS" (R-object of all non-repetitively surveyed glacial lakes)
+- "all_lakes_with_volumes.RDS" (R-object with posterior median and 68% volume estimate for each lake in 1990 and 2020)
 - "continent_dissolve.shp" (Shapefile of dissolved continent outlines)
 - "HDIofMCMC.R" (R-function to estimate the highest density interval for a given distribution, written by John K. Kruschke, available in this zip folder: https://drive.google.com/file/d/1rkpJC148LB4Hi7K-1IRKkqyED3PGWKeo/view)
 - "sciadv.adr2009_data_s1_and_s2/adr2009_data_s1.xlsx": glacial erosion rates from Wilner et al. (2024), available at https://www.science.org/doi/10.1126/sciadv.adr2009
@@ -143,16 +144,18 @@ Each script will produce output in form of a figure (displayed in the associate 
 
 ---
 
-
 ### 07_population_estimates.R
 
 **Script to extract population in the catchment feeding glacial lakes, and within the first 50 km downstream of glacial lakes**
 
 *Mandatory input data*: 
-- "all_catchments_dissolved_no_holes.gpkg" (Geopackage with all catchments feeding glacial lakes, derived from COP30 DEM data)
-- "all_lakes_with_volumes.RDS"
+- "all_catchments_dissolved_no_holes.gpkg" (Geopackage with all catchments feeding glacial lakes, dissolved, derived from COP30 DEM data)
+- "all_lakes_with_volumes.RDS" (R-object with posterior median and 68% volume estimate for each lake in 1990 and 2020)
 - "flowpaths_detailed.txt" (Flowpaths from all lakes as of 2020 from the lake to the coast/ endorheic basin)
-- "diff.gpkg"
+- "volume_regional_lakes.RDS" (R-object with a posterior estimate of regional glacial lake volumes, including the median and 68% HDI of lake volumes)
+- "diff.gpkg" (Geopackage that contains the difference between catchments and a dissolved 1-km buffer around flowpaths originating from glacial lakes)
+- "RGI2000-v7.0-o1regions.shp" (O1 regions of the RGI to aggregate lake volumes on regional level from https://doi.org/10.5067/f6jmovy5navz)
+- "continent_dissolve.shp" (Shapefile of dissolved continent outlines from ArcGIS Hub: https://hub.arcgis.com/datasets/esri::world-continents/about)
 - "landscan-global-2020.tif" (Landscan2020 data corresponding to the year when lakes were mapped: https://landscan.ornl.gov/)
 - "ppp_2020_1km_Aggregated.tif" (Worldpop 1km global: https://hub.worldpop.org/geodata/listing?id=64)
 - "gpw_v4_population_count_rev11_2020_30_sec.tif" (NASA's Gridded Population of the World (GPW), version 4; https://www.earthdata.nasa.gov/data/projects/gpw/data-access-tools)
@@ -160,9 +163,10 @@ Each script will produce output in form of a figure (displayed in the associate 
 
 *Output*:
 - "flowpath_buffers.gpkg" (1km buffer along the first 50-km flow paths downstream of glacial lakes)
-- "population_upstream_downstream.pdf"
-- "World_map.pdf"
-- "Regional_volume_vs_population.pdf"
+- "all_catchments.gpkg" / "all_catchments.gpkg" (Geopackage / R-object containing all catchments feeding glacial lakes worldwide in 2020)
+- "population_upstream_downstream.pdf" (PDF figure showing little barplots of the regional population living in the upstream catchment and along a 1-km wide, 50-km long buffer downstream of lakes)  
+- "World_map.pdf" (PDF figure showing the major RGI regions, used in Figure 6a)  
+- "Regional_volume_vs_population.pdf" (PDF figure showing a comparison of regional population versus regional lake volume upstream and downstream of lakes; Figure 6b,c)
 
 ---
 
